@@ -5,24 +5,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Rai - Technology Consultant</title>
+    <title>Shivam Rai - Technical Consultant</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f4f4f9;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
         header {
-            background-color: #20065c;
+            background-color: #4a47a3;
             color: #fff;
             padding: 20px 0;
             text-align: center;
             width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+            font-weight: 300;
         }
 
         .main-content {
@@ -31,11 +43,10 @@
         }
 
         nav {
-            background-color: #2b0d70;
-            flex: 0 0 150px;
-            /* Adjust the width of the sidebar */
+            background-color: #36306a;
+            flex: 0 0 180px;
             padding-top: 20px;
-            /* Add some space at the top */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
@@ -44,27 +55,29 @@
             display: block;
             padding: 15px 20px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, padding-left 0.3s;
         }
 
         nav a:hover {
-            background-color: rgb(132,140,171);
+            background-color: #4a47a3;
+            padding-left: 30px;
         }
 
         nav a.active {
             font-weight: bold;
             text-decoration: underline;
             background-color: #fff;
-            color: #333;
+            color: #4a47a3;
         }
 
         .container {
             flex: 1;
-            padding: 20px;
-            background-image: linear-gradient(to right, rgb(248, 248, 248), #bbb1d3);
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #d9d7f1);
         }
 
         section {
@@ -76,12 +89,20 @@
             display: block;
         }
 
+        section h2 {
+            border-bottom: 2px solid #4a47a3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
         footer {
-            background-color: #20065c;
+            background-color: #4a47a3;
             color: #fff;
             text-align: center;
             padding: 10px 0;
             width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .contact-info {
@@ -92,17 +113,81 @@
 
         .contact-info i {
             margin-right: 10px;
-            color: #333;
+            color: #4a47a3;
         }
 
         .contact-info a {
-            color: #333;
+            color: #4a47a3;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .contact-info a:hover {
-            color: #4CAF50;
+            color: #2b0d70;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            nav {
+                flex: 0 0 auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+                box-shadow: none;
+                background-color: #4a47a3;
+            }
+
+            nav a {
+                padding: 10px;
+                text-align: center;
+                flex-grow: 1;
+                font-size: 0.9em;
+            }
+
+            nav a:hover {
+                padding-left: 10px;
+            }
+
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            nav {
+                padding: 5px 0;
+            }
+
+            nav a {
+                padding: 8px;
+                font-size: 0.8em;
+            }
+
+            .container {
+                margin: 5px;
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 1.2em;
+            }
         }
     </style>
     <script>
@@ -129,7 +214,7 @@
 <body>
     <header>
         <h1>Shivam Rai</h1>
-        <p>Technology Consultant</p>
+        <p>Technical Consultant</p>
     </header>
     <div class="main-content">
         <nav>
