@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Rai - Technical Consultant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+
+        nav {
+            background-color: #5cb85c;
+            flex: 0 0 200px;
+            /* Adjust the width of the sidebar */
+            padding-top: 20px;
+            /* Add some space at the top */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+
+        nav a.active {
+            font-weight: bold;
+            text-decoration: underline;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        section {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #4CAF50;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+
+            var links = document.querySelectorAll('nav a');
+            links.forEach(function (link) {
+                link.classList.remove('active');
+            });
+            document.querySelector('nav a[onclick="showSection(\'' + sectionId + '\')"]').classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showSection('about');
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Shivam Rai</h1>
+        <p>Technical Consultant</p>
+    </header>
+    <div class="main-content">
+        <nav>
+            <a onclick="showSection('about')" class="active">About Me</a>
+            <a onclick="showSection('projects')">Projects</a>
+            <a onclick="showSection('contact')">Contact</a>
+        </nav>
+        <div class="container">
+            <section id="about" class="active">
+                <h2>About Me</h2>
+                <p>With 5 years of professional experience in banking and wealth and asset management projects, I
+                    specialize in process automation using low code technologies. I have a keen interest in Data
+                    Engineering and Python programming. Over the years, I have showcased leadership qualities and led
+                    development teams whenever required.</p>
+                <ul>
+                    <li>Possess 5 years of professional experience in the banking sector, focusing on wealth and asset
+                        management projects</li>
+                    <li>Specialize in streamlining processes through automation with low code technology platforms</li>
+                    <li>Have a strong interest and proficiency in Data Engineering and Python programming</li>
+                    <li>Demonstrated leadership skills through various opportunities to lead development teams</li>
+                    <li>Proven ability to step into leadership roles and guide projects as needed</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>Details about your projects can be added here. You can describe key projects you've worked on,
+                    highlighting your role and the technologies used.</p>
+                <ul>
+                    <li>Lending - Profession Loan Program application in Appian</li>
+                    <li>TPA-NAV-ARKS (Third Party Administrator-Net Asset Value-Accounts and Records Keeping System)
+                    </li>
+                    <li>Daily/Projected - Cashflow </li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <i class="fa fa-envelope-square"></i><a href="mailto:shivam7rai7@gmail.com">shivam7rai7@gmail.com</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fa fa-linkedin-square"></i><a href="https://www.linkedin.com/in/shivam-rai-86ba76141?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhvdNx3GYRr%2Bozn3EZBurBg%3D%3D">linkedin.com/in/shivam-rai-86ba76141/</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fa fa-phone"></i>+91 8299334675
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Shivam Rai. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
